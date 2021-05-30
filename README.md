@@ -1,8 +1,7 @@
 # hodor
 Hodor - cheat online voting contests
 
-
-      <h1 class="gap">0x07. Python - Test-driven development</h1>
+<h1 class="gap">0x07. Python - Test-driven development</h1>
 
 
   <ul class="list-group metadata" id="project-metadata">
