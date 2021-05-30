@@ -11,40 +11,40 @@ Hodor - cheat online voting contests
   </li>
 
 
-    <li class="list-group-item">
-      <i class="fa fa-user fa-fw"></i> By Guillaume, CTO at Holberton School
-    </li>
+<li class="list-group-item">
+    <i class="fa fa-user fa-fw"></i> By Guillaume, CTO at Holberton School
+</li>
 
-    <li class="list-group-item">
-      <i class="fa fa-cogs fa-fw"></i> Weight: 1
-    </li>
-
-
-
-      <li class="list-group-item">
-        <i class="fa fa-calendar fa-fw"></i>
-          Ongoing second chance project - started 05-24-2021, must end by 06-02-2021 (in 3 days)
-          - you're done with <span id="student_task_done_percentage">0</span>% of tasks.
-      </li>
+<li class="list-group-item">
+    <i class="fa fa-cogs fa-fw"></i> Weight: 1
+</li>
 
 
 
-      <li class="list-group-item">
-        <i class="fa fa-check-square fa-fw"></i>
-        QA review fully automated.
-      </li>
+<li class="list-group-item">
+<i class="fa fa-calendar fa-fw"></i>
+    Ongoing second chance project - started 05-24-2021, must end by 06-02-2021 (in 3 days)
+    - you're done with <span id="student_task_done_percentage">0</span>% of tasks.
+</li>
 
-      <div class="gap clean well">
+
+
+<li class="list-group-item">
+<i class="fa fa-check-square fa-fw"></i>
+QA review fully automated.
+</li>
+
+<div class="gap clean well">
   <h4>In a nutshell&hellip;</h4>
   <ul>
 
 
-      <li>
-        <strong>Auto QA review:</strong>
-          121.0/167 mandatory
-            &
-            0.0/104 optional
-      </li>
+<li>
+<strong>Auto QA review:</strong>
+    121.0/167 mandatory
+    &
+    0.0/104 optional
+</li>
     <li>
       <strong>Altogether:</strong>
         &nbsp;<strong>72.46%</strong>
@@ -66,14 +66,14 @@ Hodor - cheat online voting contests
 
 
 
-    <div id="project_id" style="display: none" data-project-id="246"></div>
+<div id="project_id" style="display: none" data-project-id="246"></div>
 
 
 
 
       
 
-      <div class="gap" id="project-description">
+<div class="gap" id="project-description">
   <p><img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/246/giphy-4.gif" alt="" style="" /></p>
 
 <h2>Background Context</h2>
