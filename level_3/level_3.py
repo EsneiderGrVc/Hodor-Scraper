@@ -42,5 +42,5 @@ for i in range(5):
             'captcha': captcha,
             'holdthedoor': 'submit'
         }
-        #
+        # send data
         send = s.post(URL, headers=header, data=payload)
