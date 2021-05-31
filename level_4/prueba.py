@@ -1,5 +1,4 @@
 import requests
-from requests.api import head
 
 URL = 'http://158.69.76.135/level4.php'
 WINDOWS_USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'
@@ -18,38 +17,28 @@ with open('./proxy_list.txt', 'r') as proxies:
         # proxy_list['{}'.format(i)] = line[:-1]
         i += 1
 
-for j in range():
-    # start requests session
-    with requests.Session() as s:
-        # get the response object
-        print('step 1')
-        print(proxy_list[j])
-        response = s.get(URL, headers=header, proxies=proxy_list[j])
-        print('step 2')
+for proxy in range(10):
+    try:
+        # start requests session
+        with requests.Session() as s:
+            # get the response object
+            print("step 1: ")
+            response = s.get(URL, headers=header, proxies=proxy_list[proxy])
+            print("response:", response.status_code)
 
-        # get key from cookies
-        key = response.cookies['HoldTheDoor']
+            # get key from cookies
+            key = response.cookies['HoldTheDoor']
 
-        # compose data that will send
-        payload = {
-            'id': '1',
-            'key': key,
-            'holdthedoor': 'submit'
-        }
+            # compose data that will send
+            payload = {
+                'id': '1',
+                'key': key,
+                'holdthedoor': 'submit'
+            }
 
-        # send data
-        send = s.post(URL, headers=header, proxies=proxy_list[j])
-        print(send.status_code)
-
-
-
-# with requests.Session() as s:
-#     response = s.get(URL, proxies=proxy_list, headers=header)
-#     site_key = response.cookies['HoldTheDoor']
-#     payload = {
-#             'id': '1',
-#             'key': site_key,
-#             'holdthedoor': 'submit'
-#         }
-#     send = s.post(URL, proxies=proxy_list, headers=header, data=payload)
-#     print(send)
+            # send data
+            print("\nstep 2: ")
+            send = s.post(URL, headers=header, proxies=proxy_list[proxy], data=payload)
+            print("send:", send.status_code)
+    except Exception as err:
+        print(err)
