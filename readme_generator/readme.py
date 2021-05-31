@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-SIGN_IN_URL = 'https://intranet.hbtn.io/auth/sign_in'
+SIGN_IN_URL = input(str('Here goes the url project: '))
 
 with requests.Session() as s:
     response = s.get(SIGN_IN_URL)
@@ -16,9 +16,12 @@ with requests.Session() as s:
         'commit': 'submit'
     }
     send = s.post(SIGN_IN_URL, data=payload)
-    print(send.status_code)
 
     project = s.get('https://intranet.hbtn.io/projects/246')
 
-    with open('./readme2.txt', 'w') as f:
+    with open('./README.md', 'w') as f:
         f.write(project.text)
+    print('----------------------------------------------------------------')
+    print('\nYour README file has been generated succesfully, so please...')
+    print('BUY ME A COFFEEEEEEEEEEEEEEEE! -______-\n')
+    print('----------------------------------------------------------------')
