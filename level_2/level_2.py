@@ -1,3 +1,4 @@
+# Import HTTP library
 import requests
 
 URL = 'http://158.69.76.135/level2.php'
@@ -7,21 +8,26 @@ header = {
     'User-Agent': windows_user_agent,
     'Referer': URL
 }
-for i in range(20):
-    with requests.Session() as s:
-        # get the response object
-        r = s.get(URL, headers=header)
 
-        #get key from cookies
-        key = s.cookies['HoldTheDoor']
+for i in range(5):
+    try:
+        with requests.Session() as s:
+            # get the response object
+            r = s.get(URL, headers=header)
 
-        #compose the data that will send
-        payload = {
-            'id': 1,
-            'key': key,
-            'holdthedoor': 'submit'
-        }
+            # get key from cookies
+            key = s.cookies['HoldTheDoor']
 
-        #send the data
-        r = s.post(URL, data=payload, headers=header)
-        print(r.status_code)
+            # compose the data that will send
+            payload = {
+                'id': '1',
+                'key': key,
+                'holdthedoor': 'submit'
+            }
+
+            # send the data
+            r = s.post(URL, data=payload, headers=header)
+
+    except Exception as err:
+        print(err)
+        i -= 1

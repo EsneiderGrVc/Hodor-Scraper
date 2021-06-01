@@ -17,14 +17,14 @@ with open('./proxy_list.txt', 'r') as proxies:
         # proxy_list['{}'.format(i)] = line[:-1]
         i += 1
 
-for proxy in range(10):
+for proxy in range(60, 70):
     try:
         # start requests session
         with requests.Session() as s:
             # get the response object
-            print("step 1: ")
+            print('Getting a Response Object: ...')
             response = s.get(URL, headers=header, proxies=proxy_list[proxy])
-            print("response:", response.status_code)
+            print(' - Object Obtained with status: {}'.format(response.status_code))
 
             # get key from cookies
             key = response.cookies['HoldTheDoor']
@@ -37,8 +37,8 @@ for proxy in range(10):
             }
 
             # send data
-            print("\nstep 2: ")
             send = s.post(URL, headers=header, proxies=proxy_list[proxy], data=payload)
-            print("send:", send.status_code)
+            print('Post Request made with status: {}'.format(send.status_code))
+            print('--------------------------------------')
     except Exception as err:
-        print(err)
+        print('Something went wrong =(')

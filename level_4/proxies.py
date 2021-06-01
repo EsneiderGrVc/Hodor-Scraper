@@ -13,7 +13,6 @@ def get_proxies():
     return proxies
 
 
-
 ######################write to file in format   IP:PORT######################
 try:
     proxies = get_proxies()
