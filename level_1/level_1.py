@@ -1,10 +1,10 @@
 import requests
 
 URL = 'http://158.69.76.135/level1.php'
-times = 5
+times = 4096
 votes = 0
 
-for i in range(5):
+for i in range(0, times):
     try:
         with requests.Session() as s:
             # get the response object
